@@ -30,6 +30,7 @@ export class News extends Component {
 
   async updateNews(pageNo) {
     // console.log("cdm");
+    this.props.setProgress(10);
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=143400755624442599d36dc7e12efca4&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
@@ -40,6 +41,7 @@ export class News extends Component {
       totalResults: parsedData.totalResults,
       loading: false,
     });
+    this.props.setProgress(100);
   }
 
   async componentDidMount() {
@@ -70,7 +72,12 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h1 className="text-center">NewsMonkey - Top Headlines</h1>
+        <h1
+          className="text-center"
+          style={{ marginTop: "20px", marginBottom: "2rem" }}
+        >
+          NewsMonkey - Top Headlines
+        </h1>
 
         {this.state.loading && <Spinner />}
         <InfiniteScroll
