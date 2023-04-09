@@ -1,0 +1,68 @@
+.card {
+  border: none;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-desc-div {
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.description-text {
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.arrows {
+  display: flex;
+}
+
+.like,
+.dislike {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.like svg,
+.dislike svg {
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.like svg:hover,
+.dislike svg:hover {
+  color: #000;
+}
+
+.btn-dark {
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-dark:hover {
+  background-color: #333;
+  border-color: #333;
+}

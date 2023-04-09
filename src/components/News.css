@@ -1,0 +1,15 @@
+.news-container {
+  margin: 20px;
+}
+
+.news-header {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
