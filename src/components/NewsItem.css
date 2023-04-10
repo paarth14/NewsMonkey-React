@@ -2,6 +2,8 @@
   border: none;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   position: relative;
+  height: 600px; /* Set a fixed height for the news item card */
+  overflow: hidden; /* Hide any content that extends beyond the fixed height */
 }
 
 .image-container {
